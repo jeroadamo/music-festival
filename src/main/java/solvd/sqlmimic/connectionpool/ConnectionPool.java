@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class ConnectionPool {
-    private static final String URL = "jdbc:mysql://52.59.193.212:3306/";
+    private static final String URL = "jdbc:mysql://52.59.193.212:3306/?user=root";
     private static final String USER = "root";
     private static final String PASSWORD = "devintern";
 
