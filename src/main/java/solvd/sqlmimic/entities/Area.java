@@ -2,11 +2,11 @@ package solvd.sqlmimic.entities;
 
 public class Area {
     private int idArea;
-    private String cardinal_location;
+    private String cardinalLocation;
 
-    public Area(int idArea, String cardinal_location) {
+    public Area(int idArea, String cardinalLocation) {
         this.idArea = idArea;
-        this.cardinal_location = cardinal_location;
+        this.cardinalLocation = cardinalLocation;
     }
 
     public int getIdArea() {
@@ -17,11 +17,11 @@ public class Area {
         this.idArea = idArea;
     }
 
-    public String getCardinal_location() {
-        return cardinal_location;
+    public String getCardinalLocation() {
+        return cardinalLocation;
     }
 
-    public void setCardinal_location(String cardinal_location) {
-        this.cardinal_location = cardinal_location;
+    public void setCardinalLocation(String cardinalLocation) {
+        this.cardinalLocation = cardinalLocation;
     }
 }

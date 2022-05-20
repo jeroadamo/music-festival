@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Concerts idConcerts="1">
+    <area>2</area>
+    <Date>27/05/2022</Date>
+    <duration>2hs</duration>
+    <idTickets>1</idTickets>
+    <time_Play>20:30</time_Play>
+</Concerts>

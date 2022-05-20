@@ -12,9 +12,10 @@ import java.util.List;
 import java.util.Properties;
 
 public class ConcertsDao implements IConcertDao {
+    @Override
     public Concert getById(int idConcerts) throws SQLException {
-        String query = "use jeronimo_adamo select * from Concerts where idConcerts = ?";
-        Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306", "root", "devintern" );
+        String query = "select * from Concerts where idConcerts = ?";
+        Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306/jeronimo_adamo", "root", "devintern" );
         try(PreparedStatement ps = connection.prepareStatement(query)){
             ps.setInt(1,3);
             ResultSet resultSet = ps.executeQuery();
@@ -27,20 +28,20 @@ public class ConcertsDao implements IConcertDao {
 
     @Override
     public void save(Concert concert) throws SQLException {
-        String query = "use jeronimo_adamo INSERT INTO Concerts (time_play,date,duration,idArea,idTickets) VALUES (?,?,?,?,?)" ;
-        Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306", "root", "devintern" );
+        String query = "INSERT INTO Concerts (idConcerts,time_play,date,duration,idArea,idTickets) VALUES (?,?,?,?,?,?)" ;
+        Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306/jeronimo_adamo", "root", "devintern" );
         try(PreparedStatement ps = connection.prepareStatement(query)){
             ps.setInt(1,concert.getIdConcerts());
             ps.setString(2, concert.getTime_Play());
             ps.setString(3,concert.getDate());
             ps.setString(4,concert.getDuration());
-            ps.setInt(5,concert.getIdTickets());
+            ps.setInt(5,concert.getArea());
+            ps.setInt(6,concert.getIdTickets());
             ps.executeUpdate();
+            System.out.println("Concert successfully added to DB server");
                   }catch (SQLException e){
             System.out.println(e);
         } throw new SQLException();
-
-
     }
 
     @Override
@@ -59,8 +60,8 @@ public class ConcertsDao implements IConcertDao {
         List<Concert> concerts = new ArrayList<>();
         Concert concert;
     try{
-        Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306", "root", "devintern" );
-        PreparedStatement preparedStatement = connection.prepareStatement("USE jeronimo_adamo SELECT * FROM Concerts");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306/jeronimo_adamo", "root", "devintern" );
+        PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Concerts");
         ResultSet resultSet = preparedStatement.executeQuery();
 
         while (resultSet.next()){

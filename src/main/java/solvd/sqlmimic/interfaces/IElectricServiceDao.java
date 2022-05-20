@@ -1,6 +1,6 @@
 package solvd.sqlmimic.interfaces;
 
-import solvd.sqlmimic.entities.Electric_Service;
+import solvd.sqlmimic.entities.ElectricService;
 
-public interface IElectricServiceDao extends IBaseDao<Electric_Service>{
+public interface IElectricServiceDao extends IBaseDao<ElectricService>{
 }

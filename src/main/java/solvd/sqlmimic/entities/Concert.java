@@ -4,6 +4,10 @@ import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 
+import javax.swing.text.DateFormatter;
+import java.text.DateFormat;
+import java.util.Date;
+
 @XmlRootElement(name = "Concerts")
 public class Concert {
 
@@ -28,9 +32,14 @@ public class Concert {
         this.idTickets = idTickets;
     }
 
+    public Concert() {
+
+    }
+
     public int getIdConcerts() {
         return idConcerts;
     }
+
     @XmlAttribute(name = "idConcerts")
     public void setIdConcerts(int idConcerts) {
         this.idConcerts = idConcerts;
@@ -44,8 +53,6 @@ public class Concert {
         this.idTickets = idTickets;
     }
 
-
-
     public String getTime_Play() {
         return time_Play;
     }
@@ -57,7 +64,8 @@ public class Concert {
     public String getDuration() {
         return duration;
     }
-   @XmlElement(name = "duration")
+
+    @XmlElement(name = "duration")
     public void setDuration(String duration) {
         this.duration = duration;
     }
@@ -65,7 +73,8 @@ public class Concert {
     public String getDate() {
         return date;
     }
-   @XmlElement(name = "Date")
+
+    @XmlElement(name = "Date")
     public void setDate(String date) {
         this.date = date;
     }
@@ -80,6 +89,6 @@ public class Concert {
 
     @Override
     public String toString() {
-        return idConcerts+ duration + date;
+        return "Concert{" + "idConcerts=" + idConcerts + ", time_Play='" + time_Play + '\'' + ", duration='" + duration + '\'' + ", date='" + date + '\'' + ", area=" + area + ", idTickets=" + idTickets + '}';
     }
 }

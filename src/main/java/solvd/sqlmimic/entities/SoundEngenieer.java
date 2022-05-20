@@ -1,22 +1,22 @@
 package solvd.sqlmimic.entities;
 
-public class Sound_Engenieer {
-    private int idSound_Engenieer;
+public class SoundEngenieer {
+    private int idSoundEngenieer;
     private String name;
     private Concert concert;
 
-    public Sound_Engenieer(int idSound_engenieer, String name, Concert concert) {
-        idSound_Engenieer = idSound_engenieer;
+    public SoundEngenieer(int idSound_engenieer, String name, Concert concert) {
+        idSoundEngenieer = idSound_engenieer;
         this.name = name;
         this.concert = concert;
     }
 
-    public int getIdSound_Engenieer() {
-        return idSound_Engenieer;
+    public int getIdSoundEngenieer() {
+        return idSoundEngenieer;
     }
 
-    public void setIdSound_Engenieer(int idSound_Engenieer) {
-        this.idSound_Engenieer = idSound_Engenieer;
+    public void setIdSoundEngenieer(int idSoundEngenieer) {
+        this.idSoundEngenieer = idSoundEngenieer;
     }
 
     public String getName() {

@@ -1,11 +1,11 @@
 package solvd.sqlmimic.entities;
 
-public class Electric_Service {
+public class ElectricService {
     private int idElectric_Service;
     private Area area;
     private boolean worksOnAltitude;
 
-    public Electric_Service(int idElectric_service, Area area, boolean worksOnAltitude) {
+    public ElectricService(int idElectric_service, Area area, boolean worksOnAltitude) {
         idElectric_Service = idElectric_service;
         this.area = area;
         this.worksOnAltitude = worksOnAltitude;
