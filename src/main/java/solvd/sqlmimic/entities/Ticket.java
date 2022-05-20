@@ -2,15 +2,15 @@ package solvd.sqlmimic.entities;
 
 public class Ticket {
     private int idTickets;
-    private String name_surname;
+    private String nameSurname;
     private String email;
-    private int national_id;
+    private int nationalId;
 
-    public Ticket(int idTickets, String name_surname, String email, int national_id) {
+    public Ticket(int idTickets, String nameSurname, String email, int nationalId) {
         this.idTickets = idTickets;
-        this.name_surname = name_surname;
+        this.nameSurname = nameSurname;
         this.email = email;
-        this.national_id = national_id;
+        this.nationalId = nationalId;
     }
 
     public int getIdTickets() {
@@ -21,12 +21,12 @@ public class Ticket {
         this.idTickets = idTickets;
     }
 
-    public String getName_surname() {
-        return name_surname;
+    public String getNameSurname() {
+        return nameSurname;
     }
 
-    public void setName_surname(String name_surname) {
-        this.name_surname = name_surname;
+    public void setNameSurname(String nameSurname) {
+        this.nameSurname = nameSurname;
     }
 
     public String getEmail() {
@@ -37,11 +37,11 @@ public class Ticket {
         this.email = email;
     }
 
-    public int getNational_id() {
-        return national_id;
+    public int getNationalId() {
+        return nationalId;
     }
 
-    public void setNational_id(int national_id) {
-        this.national_id = national_id;
+    public void setNationalId(int nationalId) {
+        this.nationalId = nationalId;
     }
 }

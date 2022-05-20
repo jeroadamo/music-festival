@@ -3,16 +3,16 @@ package solvd.sqlmimic.entities;
 public class Employee {
     private int idEmployee;
     private String name;
-    private int idFood_Drinks_Stand;
+    private int idFoodDrinksStand;
     private int idSecurity;
-    private int idElectric_Service;
+    private int idElectricService;
 
     public Employee(int idEmployee, String name, int idFood_drinks_stand, int idSecurity, int idElectric_service) {
         this.idEmployee = idEmployee;
         this.name = name;
-        idFood_Drinks_Stand = idFood_drinks_stand;
+        idFoodDrinksStand = idFood_drinks_stand;
         this.idSecurity = idSecurity;
-        idElectric_Service = idElectric_service;
+        idElectricService = idElectric_service;
     }
 
     public int getIdEmployee() {
@@ -31,12 +31,12 @@ public class Employee {
         this.name = name;
     }
 
-    public int getIdFood_Drinks_Stand() {
-        return idFood_Drinks_Stand;
+    public int getIdFoodDrinksStand() {
+        return idFoodDrinksStand;
     }
 
-    public void setIdFood_Drinks_Stand(int idFood_Drinks_Stand) {
-        this.idFood_Drinks_Stand = idFood_Drinks_Stand;
+    public void setIdFoodDrinksStand(int idFoodDrinksStand) {
+        this.idFoodDrinksStand = idFoodDrinksStand;
     }
 
     public int getIdSecurity() {
@@ -47,11 +47,11 @@ public class Employee {
         this.idSecurity = idSecurity;
     }
 
-    public int getIdElectric_Service() {
-        return idElectric_Service;
+    public int getIdElectricService() {
+        return idElectricService;
     }
 
-    public void setIdElectric_Service(int idElectric_Service) {
-        this.idElectric_Service = idElectric_Service;
+    public void setIdElectricService(int idElectricService) {
+        this.idElectricService = idElectricService;
     }
 }

@@ -4,6 +4,7 @@ import solvd.sqlmimic.entities.Area;
 import solvd.sqlmimic.interfaces.IAreaDao;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AreaDao implements IAreaDao {
@@ -25,7 +26,7 @@ public class AreaDao implements IAreaDao {
 
     @Override
     public void save(Area area) throws SQLException {
-        String query = "INSERT INTO Concerts (time_play,date,duration,idArea,idTickets) VALUES (?,?,?,?,?)";
+        String query = "INSERT INTO Area (idArea, cardinal_location) VALUES (?,?)";
         Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306/jeronimo_adamo", "root", "devintern");
         try (PreparedStatement ps = connection.prepareStatement(query)) {
             ps.setInt(1, area.getIdArea());
@@ -50,6 +51,21 @@ public class AreaDao implements IAreaDao {
 
     @Override
     public List<Area> selectAll() throws SQLException {
-        return null;
+       List<Area> areas = new ArrayList<>();
+       Area area;
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306/jeronimo_adamo", "root", "devintern");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Area");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()){
+            int idArea = resultSet.getInt("idArea");
+            String cardinalLocation = resultSet.getString("cardinal_location");
+            area = new Area(idArea, cardinalLocation);
+            areas.add(area);
+            }
+        } catch (SQLException e){
+            throw new SQLException(e);
+        }
+        return areas;
     }
 }

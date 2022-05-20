@@ -1,22 +1,22 @@
 package solvd.sqlmimic.entities;
 
 public class ElectricService {
-    private int idElectric_Service;
+    private int idElectricService;
     private Area area;
     private boolean worksOnAltitude;
 
     public ElectricService(int idElectric_service, Area area, boolean worksOnAltitude) {
-        idElectric_Service = idElectric_service;
+        idElectricService = idElectric_service;
         this.area = area;
         this.worksOnAltitude = worksOnAltitude;
     }
 
-    public int getIdElectric_Service() {
-        return idElectric_Service;
+    public int getIdElectricService() {
+        return idElectricService;
     }
 
-    public void setIdElectric_Service(int idElectric_Service) {
-        this.idElectric_Service = idElectric_Service;
+    public void setIdElectricService(int idElectricService) {
+        this.idElectricService = idElectricService;
     }
 
     public boolean isWorksOnAltitude() {

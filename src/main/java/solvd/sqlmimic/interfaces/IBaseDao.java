@@ -11,7 +11,7 @@ public interface IBaseDao<T> {
 
     void update(T t, String[] params);
 
-    void delete(T t);
+    void delete(T t) throws SQLException;
 
     List<T> selectAll() throws SQLException;
 }

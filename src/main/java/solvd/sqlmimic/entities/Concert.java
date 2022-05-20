@@ -6,7 +6,9 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 
 import javax.swing.text.DateFormatter;
 import java.text.DateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @XmlRootElement(name = "Concerts")
 public class Concert {
@@ -22,6 +24,7 @@ public class Concert {
     private int area;
 
     private int idTickets;
+
 
     public Concert(int idConcerts, String time_play, String duration, String date, int area, int idTickets) {
         this.idConcerts = idConcerts;

@@ -1,30 +1,30 @@
 package solvd.sqlmimic.entities;
 
 public class FoodAndDrink {
-    private int idFood_Drinks_Stand;
-    private int amount_of;
+    private int idFoodDrinksStand;
+    private int amountOf;
     private Area area;
 
-    public FoodAndDrink(int idFood_drinks_stand, int amount_of, Area area) {
-        idFood_Drinks_Stand = idFood_drinks_stand;
-        this.amount_of = amount_of;
+    public FoodAndDrink(int idFood_drinks_stand, int amountOf, Area area) {
+        idFoodDrinksStand = idFood_drinks_stand;
+        this.amountOf = amountOf;
         this.area = area;
     }
 
-    public int getIdFood_Drinks_Stand() {
-        return idFood_Drinks_Stand;
+    public int getIdFoodDrinksStand() {
+        return idFoodDrinksStand;
     }
 
-    public void setIdFood_Drinks_Stand(int idFood_Drinks_Stand) {
-        this.idFood_Drinks_Stand = idFood_Drinks_Stand;
+    public void setIdFoodDrinksStand(int idFoodDrinksStand) {
+        this.idFoodDrinksStand = idFoodDrinksStand;
     }
 
-    public int getAmount_of() {
-        return amount_of;
+    public int getAmountOf() {
+        return amountOf;
     }
 
-    public void setAmount_of(int amount_of) {
-        this.amount_of = amount_of;
+    public void setAmountOf(int amountOf) {
+        this.amountOf = amountOf;
     }
 
     public Area getArea() {
