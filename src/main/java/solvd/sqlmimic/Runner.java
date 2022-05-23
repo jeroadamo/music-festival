@@ -16,6 +16,5 @@ public class Runner {
         ConcertDaoService concertDaoService = new ConcertDaoService();
         System.out.println(concertDaoService.methodCall());
 
-
     }
 }

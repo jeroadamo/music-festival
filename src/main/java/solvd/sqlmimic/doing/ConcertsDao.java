@@ -56,7 +56,7 @@ public class ConcertsDao implements IConcertDao {
         try (PreparedStatement ps = connection.prepareStatement(query)) {
             ps.setInt(1, concert.getIdConcerts());
             ps.executeUpdate();
-        } catch (SQLException e){
+        } catch (SQLException e) {
             throw new SQLException(e);
         }
 
