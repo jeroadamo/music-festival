@@ -12,9 +12,7 @@ public class Runner {
         //System.out.println(concertsDao.selectAll());
         /*Concert concert = new Concert(9,"18:45","2hs", "27/05/2022", 2, 2);
         concertsDao.save(concert);*/
-
         ConcertDaoService concertDaoService = new ConcertDaoService();
         System.out.println(concertDaoService.methodCall());
-
     }
 }

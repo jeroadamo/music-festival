@@ -26,7 +26,6 @@ public class ConcertsDao implements IConcertDao {
         }
         throw new SQLException();
     }
-
     @Override
     public void save(Concert concert) throws SQLException {
         String query = "INSERT INTO Concerts (idConcerts,time_play,date,duration,idArea,idTickets) VALUES (?,?,?,?,?,?)";
@@ -44,11 +43,9 @@ public class ConcertsDao implements IConcertDao {
             System.out.println(e);
         }
     }
-
     @Override
     public void update(Concert concert, String[] params) {
     }
-
     @Override
     public void delete(Concert concert) throws SQLException {
         String query = "DELETE FROM Concerts WHERE idConcerts = ?";
@@ -59,9 +56,7 @@ public class ConcertsDao implements IConcertDao {
         } catch (SQLException e) {
             throw new SQLException(e);
         }
-
     }
-
     @Override
     public List<Concert> selectAll() throws SQLException {
         List<Concert> concerts = new ArrayList<>();
@@ -70,7 +65,6 @@ public class ConcertsDao implements IConcertDao {
             Connection connection = DriverManager.getConnection("jdbc:mysql://52.59.193.212:3306/jeronimo_adamo", "root", "devintern");
             PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM Concerts");
             ResultSet resultSet = preparedStatement.executeQuery();
-
             while (resultSet.next()) {
                 int idConcerts = resultSet.getInt("idConcerts");
                 String time_play = resultSet.getString("time_play");
@@ -83,11 +77,9 @@ public class ConcertsDao implements IConcertDao {
             }
         } catch (SQLException exception) {
             throw new SQLException(exception);
-
         }
         return concerts;
     }
-
     @Override
     public String toString() {
         return "ConcertsDao{}";
